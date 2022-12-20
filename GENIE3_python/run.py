@@ -24,4 +24,4 @@ gene_names = gene_names.rstrip('\n').split('\t')
 tf_names = pd.read_csv(tf_names_file, sep='\t').T.values.tolist()[0]
 VIM = GENIE3(data, gene_names=gene_names, regulators=tf_names) 
 
-get_link_list(VIM, gene_names=gene_names, file_name='ranking_test.txt') 
+get_link_list(VIM, gene_names=gene_names, regulators=tf_names, file_name='ranking_test.txt') 
